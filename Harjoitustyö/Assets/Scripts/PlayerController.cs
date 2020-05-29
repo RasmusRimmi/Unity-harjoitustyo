@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip hitSound;   
     public TextMeshProUGUI goal;
     public TextMeshProUGUI time;
+    public TextMeshProUGUI numberOfCoins;
 
     // Start is called before the first frame update
     void Start()
@@ -120,6 +121,8 @@ public class PlayerController : MonoBehaviour
             {
                 block.SetActive(false);
             }
+
+            numberOfCoins.text = coins.ToString();
         }
 
         //Stop timer and show play again button
